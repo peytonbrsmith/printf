@@ -40,7 +40,7 @@ int chkfmt(va_list *args, const char *format, int i)
 	}
 	if (fmtmods[j].type == NULL)
 	{
-	        return (-1);
+		return (-1);
 	}
 	x = fmtmods[j].type(args);
 	return (x);

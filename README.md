@@ -1,2 +1,2 @@
 # printf
-Peyton Smith's and Tyler Mcclure's recreation of the printf() function as student's of Holberton Cohort 13
+Peyton Smith's and Tyler Mcclure's recreation of the ***printf()*** function as student's of **Holberton Cohort 13**

@@ -23,12 +23,13 @@ int _printf(const char *format, ...)
 	{
 		if (format[i] == *(fmtspec[0].ltr))
 		{
-			retcount += fmtspec[0].type(&args, format, i);
-			i++;
-			if (format[i] == ' ')
-				i++;
-			if (format[i] == ' ')
+			chk += fmtspec[0].type(&args, format, i);
+			if (chk == -1)
 				return (-1);
+			retcount += chk;
+			i++;
+			while (format[i] == ' ')
+				i++;
 			chk = 1;
 		}
 		if (chk == 0)

@@ -21,8 +21,8 @@ int chkfmt(va_list *args, const char *format, int i)
 	i++;
 	if (format[i] == ' ')
 	{
-		_putchar(' ');
-		i++;
+		while (format[i] == ' ')
+			i++;
 	}
 	if (format[i] == '%')
 	{
@@ -38,9 +38,10 @@ int chkfmt(va_list *args, const char *format, int i)
 	{
 		j++;
 	}
-	if (fmtmods[j].type != NULL)
+	if (fmtmods[j].type == NULL)
 	{
-		x = fmtmods[j].type(args);
+	        return (-1);
 	}
+	x = fmtmods[j].type(args);
 	return (x);
 }

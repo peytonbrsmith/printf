@@ -24,6 +24,11 @@ int chkfmt(va_list *args, const char *format, int i)
 		_putchar('%');
 		return (1);
 	}
+	if (format[i] == 'n')
+	{
+		_putchar('\n');
+		return (1);
+	}
 	while (fmtmods[j].type != NULL && *(fmtmods[j].ltr) != format[i])
 	{
 		j++;

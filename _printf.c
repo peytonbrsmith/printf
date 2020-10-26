@@ -13,6 +13,7 @@ int _printf(const char *format, ...)
 	va_list args;
 	fmt fmtspec[] = {
 		{"%", chkfmt},
+		{"\\", chkfmt},
 		{NULL, NULL}
 	};
 
@@ -36,6 +37,5 @@ int _printf(const char *format, ...)
 	}
 
 	va_end(args);
-	_putchar('\n');
 	return (retcount);
 }

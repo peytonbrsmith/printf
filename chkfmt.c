@@ -19,6 +19,11 @@ int chkfmt(va_list *args, const char *format, int i)
 	};
 
 	i++;
+	if (format[i] == ' ')
+	{
+		_putchar(' ');
+		i++;
+	}
 	if (format[i] == '%')
 	{
 		_putchar('%');

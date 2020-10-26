@@ -25,6 +25,10 @@ int _printf(const char *format, ...)
 		{
 			retcount += fmtspec[0].type(&args, format, i);
 			i++;
+			if (format[i] == ' ')
+				i++;
+			if (format[i] == ' ')
+				return (-1);
 			chk = 1;
 		}
 		if (chk == 0)

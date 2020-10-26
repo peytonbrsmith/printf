@@ -7,6 +7,10 @@
  */
 int prchr(va_list *args)
 {
-	_putchar(va_arg(*args, int));
+	int a = va_arg(*args, int);
+
+	if (a == '\0')
+		return (-1);
+	_putchar(a);
 	return (1);
 }

@@ -8,7 +8,7 @@
 int prchr(va_list *args)
 {
 	int a = va_arg(*args, int);
-	
+
 	_putchar(a);
 	return (1);
 }

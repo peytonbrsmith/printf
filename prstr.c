@@ -11,8 +11,6 @@ int prstr(va_list *args)
 	char *ar;
 
 	ar = va_arg(*args, char *);
-	if (ar == NULL)
-		return (-1);
 	while (*ar != '\0')
 	{
 		_putchar(*ar);

@@ -8,9 +8,6 @@
 int prchr(va_list *args)
 {
 	int a = va_arg(*args, int);
-
-	if (a == '\0')
-		return (-1);
 	_putchar(a);
 	return (1);
 }

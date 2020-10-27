@@ -1,0 +1,45 @@
+.TH _printf 3
+.SH NAME
+_printf \- formatted output conversion
+.SH SYNOPSIS
+.P
+#include <stdio.h>
+.P
+#include <stdlib.h>
+.P
+#include <stdarg.h>
+.P
+#include "holberton.h"
+.P
+int _printf(const char *format, ...);
+.SH DESCRIPTION
+_printf() produces an output according to a format described below, written to
+.I stdout
+.SS Return value
+Upon a successful return, _printf() returns the number of characters printed, excluding the terminating null byte.
+.SS Format of the format string
+The format string is a characer string composed of zero or more directives; non-% characters, which are copied 
+unchanged to the output stream, and conversion specifiers, which fetch arguments. Conversion specifiers will be 
+preceeded by the character %. The conversion specifier(s) must be further followed by arguments; the 
+complete formatting for this is listed in the "example" field below.
+.SS Conversion specifiers
+Characters that specify the type of conversion to be applied. They are as follows:
+.SS c
+An int argument is converted to an unsigned char and the resulting character is then written.
+.SS s
+A constant char * argument pointing to an array of characters is accessed and the string is written up to, but not 
+including, the terminating null byte.
+.SS %
+Since % is used to identify a conversion specifier, in order to print this character we must specify it with itself in 
+order to print it, ie. %%.
+.SS d, i
+An int argument is converted to signed decimal notation and written.
+.SH EXAMPLE
+To print a string:
+.PP
+.nf
+.RS
+_printf("%s", "Hello, world!")
+.RE
+.fi
+.PP
